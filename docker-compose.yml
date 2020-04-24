@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  se.identidade.api:
+    image: ${DOCKER_REGISTRY-}seidentidadeapi
+    build:
+      context: .
+      dockerfile: src/Services/SE.Identidade.API/Dockerfile
+
+  se.carrinho.api:
+    image: ${DOCKER_REGISTRY-}secarrinhoapi
+    build:
+      context: .
+      dockerfile: src/Services/SE.Carrinho.API/Dockerfile
+
+
+  se.catalogo.api:
+    image: ${DOCKER_REGISTRY-}secatalogoapi
+    build:
+      context: .
+      dockerfile: src/Services/SE.Catalogo.API/Dockerfile
+
+
+  se.cliente.api:
+    image: ${DOCKER_REGISTRY-}seclienteapi
+    build:
+      context: .
+      dockerfile: src/Services/SE.Cliente.API/Dockerfile
+
+
+  se.pagamento.api:
+    image: ${DOCKER_REGISTRY-}sepagamentoapi
+    build:
+      context: .
+      dockerfile: src/Services/SE.Pagamento.API/Dockerfile
+
+
+  se.pedido.api:
+    image: ${DOCKER_REGISTRY-}sepedidoapi
+    build:
+      context: .
+      dockerfile: src/Services/SE.Pedido.API/Dockerfile
+
+
+  se.webapp.mvc:
+    image: ${DOCKER_REGISTRY-}sewebappmvc
+    build:
+      context: .
+      dockerfile: src/Web/SE.WebApp.MVC/Dockerfile
+
